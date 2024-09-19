@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link me-3" routerLink="/master" routerLinkActive="active">Master</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-3" routerLink="/employee" routerLinkActive="active">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client" routerLinkActive="active">Client</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client-project" routerLinkActive="active">Client Project</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit" (click)="logout()">Logout</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container pt-1">
+    <router-outlet></router-outlet>
+</div>
