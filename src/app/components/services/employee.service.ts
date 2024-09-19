@@ -9,11 +9,13 @@ import { Employee } from '../model/class/employee';
 })
 export class EmployeeService {
   private apiUrl = 'https://freeapi.miniprojectideas.com/api/ClientStrive';
+  private proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  private url = this.proxyUrl + this.apiUrl;
 
   constructor(private http: HttpClient) { }
 
   getAllEmployees(): Observable<APIResponseModel> {
-    return this.http.get<APIResponseModel>(`${this.apiUrl}/GetAllEmployee`);
+    return this.http.get<APIResponseModel>(`${this.url}/GetAllEmployee`);
   }
 
   getEmployeeById(employeeId: number): Observable<APIResponseModel> {
